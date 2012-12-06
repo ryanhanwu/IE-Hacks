@@ -24,7 +24,7 @@
 | color```/**/```:             |     |  V  |  V  |  V  |     |
 | black```\9```;               | V   |  V  |  V  |  V  |     |
 | color```/*\**/```: black```\9```;   |     |  V  |  V  |     |     |
-| black```\0/```;              |     |     |  V  |  V  |     |
+| black```\0/```;              |     |     |  V  |  V  |  ?  |
 
 
 #### Selector Hacks
@@ -39,6 +39,7 @@
 | ```html>/**/body``` #div       |     |     |  V  |     |     |
 | ```html:root``` #div       |     |     |  V  |     |     |
 | ```:root``` #div { color: black```\9```;}|     |    |    |  V  |     |
+| ```:root``` #div { color: black```\0```;}|     |    |    |  V  |  V  |
 
 #### Media Hacks
 |                                |IE 6 |IE 7 |IE 8 |IE 9 |IE 10|
@@ -47,6 +48,9 @@
 | ```@media \0screen\,screen\9``` { … }  | V   |  V  | V   |     |     |
 | ```@media \0screen``` { … }    |     |     |  V  |     |     |
 | ```@media screen\0``` { … }    |     |     |  V  |  V  |     |
+| ```@media screen and (min-width:0\0)``` { … } | | | | V | V |
+| ```@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)``` { … } | | | |  | V |
+
 
 ### Conditional Comments
 
@@ -54,10 +58,31 @@
 * Follow this article : [QuirksMode](http://www.quirksmode.org/css/condcom.html)
 
 
-#### IE 10
+#### IE 10 (Deprecated)
 * [Obsolete features in Internet Explorer 10](http://msdn.microsoft.com/en-us/library/ie/hh801218(v=vs.85\).aspx)
 
-* **Update 2012/12/07** : [IE 10 CSS Hack](http://www.impressivewebs.com/ie10-css-hacks/)
+ 
+JavaScript
+
+```
+< !--[if !IE]><!--<script>
+if (/*@cc_on!@*/false) {
+    document.documentElement.className+=' ie10';
+}
+</script><!--<![endif]-->
+
+```
+
+In CSS
+
+```
+.ie10 .example {
+   /* IE10-only styles go here */
+}
+```
+
+
+
 
 ## DocType
 #### Meta Tag
@@ -93,6 +118,8 @@
 * [Browser Shots](http://browsershots.org/)
 
 ## Refernces
+* **Update 2012/12/07** : [IE 10 CSS Hack](http://www.impressivewebs.com/ie10-css-hacks/)
+* http://blog.vervestudios.co/blog/post/2011/05/13/IE9-Only-CSS-Hack.aspx
 * https://gist.github.com/983116
 * http://www.impressivewebs.com/ie10-css-hacks/
 * http://www.webdevout.net/css-hacks
@@ -102,8 +129,4 @@
 * http://msdn.microsoft.com/en-us/library/ff955275(v=vs.85).aspx
 
 
-#### TODO
-http://blog.vervestudios.co/blog/post/2011/05/13/IE9-Only-CSS-Hack.aspx
-
-
-<a href="https://github.com/flyworld/IE-Hacks"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
+<a href="https://github.com/flyworld/IE-Hacks/tree/gh-pages"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>

@@ -241,7 +241,7 @@ pre code {
 <td align="center">     </td>
 <td align="center">  V  </td>
 <td align="center">  V  </td>
-<td align="center">     </td>
+<td align="center">  ?  </td>
 </tr>
 </tbody>
 </table>
@@ -325,6 +325,14 @@ pre code {
 <td align="center">  V  </td>
 <td align="center">     </td>
 </tr>
+<tr>
+<td align="left"> <code>:root</code> #div { color: black<code>\0</code>;}</td>
+<td align="center">     </td>
+<td align="center">    </td>
+<td align="center">    </td>
+<td align="center">  V  </td>
+<td align="center">  V  </td>
+</tr>
 </tbody>
 </table>
 
@@ -375,6 +383,22 @@ pre code {
 <td align="center">  V  </td>
 <td align="center">     </td>
 </tr>
+<tr>
+<td align="left"> <code>@media screen and (min-width:0\0)</code> { … } </td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center"> V </td>
+<td align="center"> V </td>
+</tr>
+<tr>
+<td align="left"> <code>@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)</code> { … } </td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">  </td>
+<td align="center"> V </td>
+</tr>
 </tbody>
 </table>
 
@@ -388,13 +412,28 @@ pre code {
 </ul>
 
 
-<h4>IE 10</h4>
+<h4>IE 10 (Deprecated)</h4>
 
 <ul>
-<li><p><a href="http://msdn.microsoft.com/en-us/library/ie/hh801218(v=vs.85).aspx">Obsolete features in Internet Explorer 10</a></p></li>
-<li><p><strong>Update 2012/12/07</strong> : <a href="http://www.impressivewebs.com/ie10-css-hacks/">IE 10 CSS Hack</a></p></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/ie/hh801218(v=vs.85).aspx">Obsolete features in Internet Explorer 10</a></li>
 </ul>
 
+
+<p>JavaScript</p>
+
+<pre><code>&lt; !--[if !IE]&gt;&lt;!--&lt;script&gt;
+if (/*@cc_on!@*/false) {
+    document.documentElement.className+=' ie10';
+}
+&lt;/script&gt;&lt;!--&lt;![endif]--&gt;
+</code></pre>
+
+<p>In CSS</p>
+
+<pre><code>.ie10 .example {
+   /* IE10-only styles go here */
+}
+</code></pre>
 
 <h2>DocType</h2>
 
@@ -477,6 +516,8 @@ pre code {
 <h2>Refernces</h2>
 
 <ul>
+<li><strong>Update 2012/12/07</strong> : <a href="http://www.impressivewebs.com/ie10-css-hacks/">IE 10 CSS Hack</a></li>
+<li>http://blog.vervestudios.co/blog/post/2011/05/13/IE9-Only-CSS-Hack.aspx</li>
 <li>https://gist.github.com/983116</li>
 <li>http://www.impressivewebs.com/ie10-css-hacks/</li>
 <li>http://www.webdevout.net/css-hacks</li>
@@ -487,10 +528,6 @@ pre code {
 </ul>
 
 
-<h4>TODO</h4>
-
-<p>http://blog.vervestudios.co/blog/post/2011/05/13/IE9-Only-CSS-Hack.aspx</p>
-
-<p><a href="https://github.com/flyworld/IE-Hacks"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a></p>
+<p><a href="https://github.com/flyworld/IE-Hacks/tree/gh-pages"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a></p>
 </body>
 </html>
