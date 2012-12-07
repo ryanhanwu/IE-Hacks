@@ -42,14 +42,14 @@
 | ```:root``` #div { color: black```\0```;}|     |    |    |  V  |  V  |
 
 #### Media Hacks
-|                                |IE 6 |IE 7 |IE 8 |IE 9 |IE 10|
-|:-------------------------------|:---:|:---:|:---:|:---:|:---:|
-| @media screen```\9``` { … }    | V   |  V  |     |     |     |
-| @media ```\0```screen```\```,screen```\9``` { … }  | V   |  V  | V   |     |     |
-| @media ```\0```screen { … }    |     |     |  V  |     |     |
-| @media screen```\0``` { … }    |     |     |  V  |  V  |     |
-| @media screen and (min-width:0```\0```) { … } | | | | V | V |
-| @media screen and ```(-ms-high-contrast: active), (-ms-high-contrast: none)``` { … } | | | |  | V |
+|                                |IE 6 |IE 7 |IE 8 |IE 9 |IE 10| Test |
+|:-------------------------------|:---:|:---:|:---:|:---:|:---:|      |
+| @media screen```\9``` { … }    | V   |  V  |     |     |     | [Link]([Link](http://jsfiddle.net/theryanwu/QTZkV/3/)  |
+| @media ```\0```screen```\```,screen```\9``` { … }  | V   |  V  | V  |     |     |  [Link](http://jsfiddle.net/theryanwu/QTZkV/3/)|
+| @media ```\0```screen { … }    |     |     |  V  |     |     | [Link](http://jsfiddle.net/theryanwu/HWrUV/7/)|
+| @media screen```\0``` { … }    |     |     |  V  |  V  |  V  | [Link](http://jsfiddle.net/theryanwu/HWrUV/7/) |
+| @media screen and (min-width:0```\0```) { … } | | |  | V | V | [Link](http://jsfiddle.net/theryanwu/HWrUV/7/) |
+| @media screen and ```(-ms-high-contrast: active), (-ms-high-contrast: none)``` { … } | | | |  | V | [Link](http://jsfiddle.net/theryanwu/BwzRR/)
 
 
 ### Conditional Comments
@@ -58,22 +58,25 @@
 * Follow this article : [QuirksMode](http://www.quirksmode.org/css/condcom.html)
 
 
-#### IE 10 (Deprecated)
+#### Deprecated in IE 10
 * [Obsolete features in Internet Explorer 10](http://msdn.microsoft.com/en-us/library/ie/hh801218(v=vs.85\).aspx)
 
- 
-JavaScript
+##### Work Around
+
+**JavaScript**
 
 ```
-< !--[if !IE]><!--<script>
-if (/*@cc_on!@*/false) {
-    document.documentElement.className+=' ie10';
-}
-</script><!--<![endif]-->
+ <!--[if !IE]><!-->
+ <script>
+ 	if (/*@cc_on!@*/false) {
+ 		document.documentElement.className+=' ie10';
+ 	}
+ </script>
+ <!--<![endif]-->
 
 ```
 
-In CSS
+**CSS**
 
 ```
 .ie10 .example {
@@ -81,7 +84,7 @@ In CSS
 }
 ```
 
-
+* Test IE 10 on [JS Fiddle](http://jsfiddle.net/theryanwu/UE6xd/)
 
 
 ## DocType
@@ -113,6 +116,8 @@ In CSS
 * [How IE 7 Determine Document Mode](imgs/DocMode-IE7.png)
 
 ## Useful Development Tools
+* [JS Bin](http://jsbin.com/)
+* [JS Fiddle](http://jsfiddle.net/)
 * [IE Tester](http://www.my-debugbar.com/wiki/IETester/HomePage)
 * [IE Collection](http://finalbuilds.com/iecollection.htm)
 * [Browser Shots](http://browsershots.org/)

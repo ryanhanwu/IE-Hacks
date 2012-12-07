@@ -348,6 +348,7 @@ pre code {
 <th align="center">IE 8 </th>
 <th align="center">IE 9 </th>
 <th align="center">IE 10</th>
+<th> Test </th>
 </tr>
 </thead>
 <tbody>
@@ -358,14 +359,16 @@ pre code {
 <td align="center">     </td>
 <td align="center">     </td>
 <td align="center">     </td>
+<td> <a href="[Link](http://jsfiddle.net/theryanwu/QTZkV/3/">Link</a>  </td>
 </tr>
 <tr>
 <td align="left"> @media <code>\0</code>screen<code>\</code>,screen<code>\9</code> { … }  </td>
 <td align="center"> V   </td>
 <td align="center">  V  </td>
-<td align="center"> V   </td>
+<td align="center"> V  </td>
 <td align="center">     </td>
 <td align="center">     </td>
+<td>  <a href="http://jsfiddle.net/theryanwu/QTZkV/3/">Link</a></td>
 </tr>
 <tr>
 <td align="left"> @media <code>\0</code>screen { … }    </td>
@@ -374,6 +377,7 @@ pre code {
 <td align="center">  V  </td>
 <td align="center">     </td>
 <td align="center">     </td>
+<td> <a href="http://jsfiddle.net/theryanwu/HWrUV/7/">Link</a></td>
 </tr>
 <tr>
 <td align="left"> @media screen<code>\0</code> { … }    </td>
@@ -381,15 +385,17 @@ pre code {
 <td align="center">     </td>
 <td align="center">  V  </td>
 <td align="center">  V  </td>
-<td align="center">     </td>
+<td align="center">  V  </td>
+<td> <a href="http://jsfiddle.net/theryanwu/HWrUV/7/">Link</a> </td>
 </tr>
 <tr>
 <td align="left"> @media screen and (min-width:0<code>\0</code>) { … } </td>
 <td align="center"> </td>
 <td align="center"> </td>
-<td align="center"> </td>
+<td align="center">  </td>
 <td align="center"> V </td>
 <td align="center"> V </td>
+<td> <a href="http://jsfiddle.net/theryanwu/HWrUV/7/">Link</a> </td>
 </tr>
 <tr>
 <td align="left"> @media screen and <code>(-ms-high-contrast: active), (-ms-high-contrast: none)</code> { … } </td>
@@ -398,6 +404,7 @@ pre code {
 <td align="center"> </td>
 <td align="center">  </td>
 <td align="center"> V </td>
+<td> <a href="http://jsfiddle.net/theryanwu/BwzRR/">Link</a></td>
 </tr>
 </tbody>
 </table>
@@ -412,28 +419,37 @@ pre code {
 </ul>
 
 
-<h4>IE 10 (Deprecated)</h4>
+<h4>Deprecated in IE 10</h4>
 
 <ul>
 <li><a href="http://msdn.microsoft.com/en-us/library/ie/hh801218(v=vs.85).aspx">Obsolete features in Internet Explorer 10</a></li>
 </ul>
 
 
-<p>JavaScript</p>
+<h5>Work Around</h5>
 
-<pre><code>&lt; !--[if !IE]&gt;&lt;!--&lt;script&gt;
-if (/*@cc_on!@*/false) {
-    document.documentElement.className+=' ie10';
-}
-&lt;/script&gt;&lt;!--&lt;![endif]--&gt;
+<p><strong>JavaScript</strong></p>
+
+<pre><code> &lt;!--[if !IE]&gt;&lt;!--&gt;
+ &lt;script&gt;
+    if (/*@cc_on!@*/false) {
+        document.documentElement.className+=' ie10';
+    }
+ &lt;/script&gt;
+ &lt;!--&lt;![endif]--&gt;
 </code></pre>
 
-<p>In CSS</p>
+<p><strong>CSS</strong></p>
 
 <pre><code>.ie10 .example {
    /* IE10-only styles go here */
 }
 </code></pre>
+
+<ul>
+<li>Test IE 10 on <a href="http://jsfiddle.net/theryanwu/UE6xd/">JS Fiddle</a></li>
+</ul>
+
 
 <h2>DocType</h2>
 
@@ -507,6 +523,8 @@ if (/*@cc_on!@*/false) {
 <h2>Useful Development Tools</h2>
 
 <ul>
+<li><a href="http://jsbin.com/">JS Bin</a></li>
+<li><a href="http://jsfiddle.net/">JS Fiddle</a></li>
 <li><a href="http://www.my-debugbar.com/wiki/IETester/HomePage">IE Tester</a></li>
 <li><a href="http://finalbuilds.com/iecollection.htm">IE Collection</a></li>
 <li><a href="http://browsershots.org/">Browser Shots</a></li>
