@@ -21,8 +21,7 @@
 | ```*```color:                      | V   |  V  |     |     |     |
 | ```#```color:                      | V   |  V  |     |     |     |
 | ```+```color:                      | V   |  V  |     |     |     |
-| color```/**/```:                   |     |  V  |  V  |  V  |     | 
-| color```/*\**/```: black```\9```;  |     |  V  |  V  |     |     | [Link](http://jsfiddle.net/theryanwu/nJsnL/3/) |
+| color```/*\**/```: black```\9```;  |     |  V  |  V  |  V  |  V  | [Link](http://jsfiddle.net/theryanwu/nJsnL/3/) |
 | black```\0/```;                    |     |     |  V  |  V  |  V  | [Link](http://jsfiddle.net/theryanwu/nJsnL/3/) |
 | black```\9```;                     | V   |  V  |  V  |  V  |  V  | [Link](http://jsfiddle.net/theryanwu/Emhha/4/) |
 
