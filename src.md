@@ -15,16 +15,16 @@
 
 #### Attribute Hacks
 
-|                              |IE 6 |IE 7 |IE 8 |IE 9 |IE 10|
-|:-----------------------------|:---:|:---:|:---:|:---:|:---:|
-| ```_```color:                | V   |     |     |     |     |
-| ```*```color:                | V   |  V  |     |     |     |
-| ```#```color:                | V   |  V  |     |     |     |
-| ```+```color:                | V   |  V  |     |     |     |
-| color```/**/```:             |     |  V  |  V  |  V  |     |
-| black```\9```;               | V   |  V  |  V  |  V  |     |
-| color```/*\**/```: black```\9```;   |     |  V  |  V  |     |     |
-| black```\0/```;              |     |     |  V  |  V  |  ?  |
+|                                    |IE 6 |IE 7 |IE 8 |IE 9 |IE 10| Test |
+|:-----------------------------------|:---:|:---:|:---:|:---:|:---:|:----:|
+| ```_```color:                      | V   |     |     |     |     |
+| ```*```color:                      | V   |  V  |     |     |     |
+| ```#```color:                      | V   |  V  |     |     |     |
+| ```+```color:                      | V   |  V  |     |     |     |
+| color```/**/```:                   |     |  V  |  V  |  V  |     | 
+| color```/*\**/```: black```\9```;  |     |  V  |  V  |     |     | [Link](http://jsfiddle.net/theryanwu/nJsnL/3/) |
+| black```\0/```;                    |     |     |  V  |  V  |  V  | [Link](http://jsfiddle.net/theryanwu/nJsnL/3/) |
+| black```\9```;                     | V   |  V  |  V  |  V  |  V  | [Link](http://jsfiddle.net/theryanwu/Emhha/4/) |
 
 
 #### Selector Hacks
